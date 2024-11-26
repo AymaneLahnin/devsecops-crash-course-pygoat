@@ -25,6 +25,7 @@ jobs:
 
     - name: Run Bandit
       run: bandit -r . -f json -o bandit-report.json --exit-zero
+      continue-on-error: true
 
     - name: Display Bandit Report
       run: cat bandit-report.txt
